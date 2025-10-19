@@ -1,30 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>YEEHAWWWWW</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Button</title>
   <style>
     body {
-      font-family: Arial;
-      text-align: center;
-      padding-top: 50px;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background-color: #fff0f5;
+      margin: 0;
     }
+
     h1 {
-      color: #4CAF50;
+      color: #e91e63;
+    }
+
+    button {
+      background-color: #e91e63;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 18px;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.2s, background-color 0.3s;
+      animation: pulse 2s infinite;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      background-color: #c2185b;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.03); }
+      100% { transform: scale(1); }
     }
   </style>
 </head>
 <body>
-  <h1>GL frst website !!!!! CRAZY IKRRRR</h1>
-  <p>HIIIIIIIIIIIIII</p>
-   <h1>My Website</h1>
-  <p>This is a test button:</p>
 
-  <button onclick="sayHello()">Click Me</button>
+  <h1>💖 Welcome to My Valentine Site 💖</h1>
+
+  <button onclick="greetUser()">Click Me!</button>
 
   <script>
-    function sayHello() {
-      alert("Hello! Welcome to my website 💖");
+    function greetUser() {
+      const name = prompt("What's your name?");
+      if (name) {
+        alert("Hi " + name + "! You're amazing 💘");
+      } else {
+        alert("Hello mysterious stranger! 💫");
+      }
     }
   </script>
+
 </body>
 </html>
